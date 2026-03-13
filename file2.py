@@ -46,7 +46,7 @@ env2 = st.selectbox("Je, una marafiki wowote wenye watoto wenye umri sawa na mto
 
 
 # ----Insufficient food intake and its physical consequences items (3 questions) ----
-st.subheader("Insufficient food intake")
+st.subheader("Insufficient food intake from food insecurity scale")
 food_options = {
   
    "Rarely (once or twice in the past four weeks)": 1,
