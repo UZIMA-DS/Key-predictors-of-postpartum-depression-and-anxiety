@@ -4,7 +4,7 @@ import joblib
 
 model = model = joblib.load("logistic_regression_trained_with_11_model.pkl")
 
-st.title("Maternal & Child Risk Screening")
+st.title("Child off-track screening")
 
 # ---- Depression items (3 questions) ----
 st.subheader("Depression symptoms")
