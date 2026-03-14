@@ -19,6 +19,7 @@ dep2 = st.selectbox("Feeling down, depressed, or hopeless", list(dep_options.key
 dep3 = st.selectbox("Thought that you would be better off dead or of hurting yourself in some way", list(dep_options.keys()))
 
 depression_total = dep_options[dep1]+  dep_options[dep2] +  dep_options[dep3]
+print(f'Depression total score:{depression_total}')
 
 # ---- Anxiety items (2 questions) ----
 st.subheader("Anxiety symptoms")
@@ -32,6 +33,7 @@ anx1 = st.selectbox("In the last 2 weeks, have you felt nervous, anxious or on e
 anx2 = st.selectbox("In the last 2 weeks, have you not been able to stop or control worrying?", list(anx_options.keys()))
 
 anxiety_total = anx_options[anx1] + anx_options[anx2]
+print(f'Anxiety total score:{anxiety_total}')
 
 # ---- home screening items (2 questions) ----
 st.subheader("home environment screening")
@@ -60,7 +62,7 @@ food4 = st.selectbox("Did you or any household member go to sleep at night hungr
 food5 = st.selectbox("Did you or any household member go a whole day and night without eating anything because there was not enough food?", list(food_options.keys()))
 
 food_total = food_options[food1] + food_options[food2] + food_options[food3]+food_options[food4]+food_options[food5]
-
+print(f'Food total score: {food_total}')
 # Other inputs
 Muac = st.number_input("Maternal Muac", 10.0, 60.0, 20.0)
 Muac_child = st.number_input("Child Muac", 5.0, 20.0, 20.0)
@@ -85,11 +87,11 @@ if st.button("Predict"):
        
     }])
 
-    child_label = model.predict(X)[0]
+    prob = model.predict_proba(X)[0,1]
 
-    #st.write(f"Predicted probability: {prob:.3f}")
+    st.write(f"Predicted probability: {prob:.3f}")
 
-    if  child_label == 1:
-        st.warning("Child is off-track")
+    if  prob >= 0.024:
+        st.warning("High probability that the child is developmentally off-track. Referral recommended.")
     else:
-        st.success("Child is on-track")
+        st.success("Child is developmentally on-track")
