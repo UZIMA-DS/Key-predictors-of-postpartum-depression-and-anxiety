@@ -8,6 +8,8 @@ st.title("Child off-track screening")
 
 # ---- Depression items (3 questions) ----
 st.subheader("Depression symptoms")
+# Instruction (shown once)
+st.write("Over the last 2 weeks, how often have you been bothered by the following problems?")
 dep_options = {
     "Not at all": 0,
     "Several days": 1,
@@ -23,6 +25,8 @@ st.write(f'Depression total score:{depression_total}')
 
 # ---- Anxiety items (2 questions) ----
 st.subheader("Anxiety symptoms")
+# Instruction (shown once)
+st.write("Over the last 2 weeks, how often have you been bothered by the following problems?")
 anx_options = {
     "Not at all": 0,
     "Several days": 1,
@@ -49,6 +53,8 @@ env2 = st.selectbox("Je, una marafiki wowote wenye watoto wenye umri sawa na mto
 
 # ----Insufficient food intake and its physical consequences items (3 questions) ----
 st.subheader("Insufficient food intake items from food insecurity scale")
+# Instruction (shown once)
+st.write("Over the last 4 weeks, how often did the following happen?")
 food_options = {
   
    "Rarely (once or twice in the past four weeks)": 1,
