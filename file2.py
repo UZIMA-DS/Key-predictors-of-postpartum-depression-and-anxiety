@@ -98,6 +98,6 @@ if st.button("Predict"):
     st.write(f"Predicted probability: {prob:.3f}")
 
     if  prob >= 0.024:
-        st.warning("High probability that the child is developmentally off-track. Referral recommended.")
+        st.warning("High probability that the child is developmentally off-track and likely to follow this trajectory over the next 18 months. Referral recommended.")
     else:
         st.success("Child is developmentally on-track")
