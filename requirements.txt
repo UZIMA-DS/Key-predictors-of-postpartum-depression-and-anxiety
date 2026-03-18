@@ -1,0 +1,31 @@
+streamlit
+
+pandas
+numpy
+
+matplotlib
+seaborn
+
+# Statistics
+pingouin
+scipy
+statsmodels
+
+# Machine learning
+scikit-learn
+imbalanced-learn
+
+# Model interpretation
+shap
+
+# Table creation
+tableone
+
+# Missing data visualization
+missingno
+
+# Saving/loading models
+joblib
+
+xgboost 
+lightgbm
