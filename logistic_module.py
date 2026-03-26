@@ -632,6 +632,7 @@ class Classifier(BaseEstimator, TransformerMixin):
         plt.show()
         #plt.show()
         for i in range(30):
+            plt.figure(figsize=(8, 6))
             shap.dependence_plot(i, shap_values_test, X_test, interaction_index=None, show=False)
             ax = plt.gca()
             ax.set_xlabel(ax.get_xlabel(), fontsize=13)  # Modify size as needed fontweight='bold'
