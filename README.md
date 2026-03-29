@@ -14,9 +14,9 @@ It also incorporates model explainability using SHAP analysis.
 
 ***1. Clone repository***
 
-git clone [your-repo-url]
+git clone https://github.com/UZIMA-DS/Key-predictors-of-postpartum-depression-and-anxiety.git
 
-cd project_folder
+cd project_folder #create a folder eg  cd Key-predictors-of-postpartum-depression-and-anxiety
 
 ***2. Create a virtual environment***
 
@@ -34,6 +34,7 @@ pip install -r requirements.txt
   - features.csv - feature columns
   - anxiety_labels.csv -target labels for anxiety
   - depression_labels.csv -target labels for depression
+  - labels.csv should be used for lables
 
 2. Run the main script
 
