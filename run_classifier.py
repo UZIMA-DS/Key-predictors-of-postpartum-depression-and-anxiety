@@ -5,7 +5,7 @@ from rf_xgboost_module import Classifier
 
 # Load your data
 X = pd.read_csv(r"C:\Users\faith.neema\Downloads\features.csv")
-y = pd.read_csv(r"C:\Users\faith.neema\Downloads\labels.csv")
+y = pd.read_csv(r"C:\Users\faith.neema\Downloads\dep_labels.csv")
 
 #if __name__ == "__main__":
     #classifier_logistic = Classifier(classifier='logistic')
